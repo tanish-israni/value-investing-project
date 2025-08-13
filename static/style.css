@@ -1,0 +1,127 @@
+/* ===== Global Settings ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e1116;
+  color: #d1d4dc;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ===== Links and Buttons ===== */
+a, .button {
+  color: #00b386;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+a:hover, .button:hover {
+  color: #00e6a2;
+}
+
+.button {
+  background-color: #00b386;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #131722;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  color: #00b386;
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* ===== Logo Animation ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-svg {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes arrowMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
+
+/* ===== Main Layout ===== */
+main {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 3rem; }
+
+/* ===== Form Styles ===== */
+form {
+  background-color: #131722;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+input, select, textarea {
+  background-color: #1c1f26;
+  border: 1px solid #333;
+  color: #d1d4dc;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #1c1f26;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+th {
+  background-color: #2a2f3a;
+  color: #00b386;
+}
+
+td {
+  color: #d1d4dc;
+}
+
