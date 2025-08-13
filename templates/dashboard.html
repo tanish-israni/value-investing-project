@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - ValueInvest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .scroll-table-wrapper {
+      overflow-x: auto;
+      margin-top: 2rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+
+    table {
+      min-width: 600px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  {% include 'header.html' %}
+
+  <main class="container">
+    <h2 class="text-center" style="color:#00b386;">Investment Dashboard</h2>
+
+    <form method="POST">
+      <input type="number" name="capital" placeholder="Enter Capital Amount" required>
+      <button type="submit">Run Analysis</button>
+    </form>
+
+    {% if stocks %}
+      <h3 class="mt-4">Top 50 Value Stocks</h3>
+      
+      <div class="scroll-table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Stock</th>
+              <th>RV Score</th>
+              <th>Share Price</th>
+              <th>Shares to Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in stocks %}
+              <tr>
+                <td>{{ row['stock'] }}</td>
+                <td>{{ row['rv_score'] }}</td>
+                <td>{{ row['current_price'] }}</td>
+                <td>{{ row['shares_to_buy'] }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="{{ url_for('download') }}" class="button">Download Excel File</a>
+      </div>
+    {% endif %}
+  </main>
+</body>
+</html>

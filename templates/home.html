@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .darkaccent {
+            color: #4CAF50; /* A nice green accent color */
+        }
+    </style>
+</head>
+
+<main class="relative min-h-screen overflow-hidden bg-gray-900">
+    <div class="absolute inset-0 z-0">
+        <img src="{{ url_for('static', filename='slide1.jpg') }}"
+             alt="Hero Background"
+             class="w-full h-full object-cover opacity-70" />
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div> </div>
+
+    <div class="relative z-10 flex flex-col justify-center items-start h-full max-w-7xl mx-auto px-6 py-24 text-white">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5">
+            Data Driven <br><span class="darkaccent">Value Investing</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+            For long-term investors seeking deep value picks. Start your journey with us today.
+        </p>
+        <a href="{{ url_for('register') }}"
+           class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md shadow-lg transition duration-300 ease-in-out">
+            Sign up now
+        </a>
+    </div>
+</main>
+
+
+
+
+
+
+
+  

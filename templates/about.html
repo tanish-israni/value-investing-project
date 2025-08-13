@@ -1,0 +1,45 @@
+{% include 'header.html' %}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .darkaccent {
+            color: #4CAF50; /* Consistent green accent color */
+        }
+    </style>
+</head>
+
+<main class="bg-gray-900 py-16">
+    <div class="container mx-auto px-6 text-white">
+        <section class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-green-500">About <span class="darkaccent">ValueInvest</span></h2>
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                <strong>ValueInvest</strong> is a smart, data-driven stock analysis platform built to empower investors in the Indian stock market to identify fundamentally undervalued companies.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                Our core philosophy revolves around the principles of <strong>value investing</strong>. We meticulously analyze crucial financial ratios such as P/E, P/B, EV, EBITDA, EV/EBITDA to generate a percentile-based <strong>RV Score</strong>, highlighting companies with strong fundamental characteristics.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                Engineered with precision using Python, Flask, and robust financial APIs, our platform enables users to:
+            </p>
+
+            <div class="mb-8">
+                <ul class="list-disc list-inside text-lg text-left inline-block text-gray-300">
+                    <li class="mb-2">Analyze companies within the Nifty 500 index.</li>
+                    <li class="mb-2">Leverage a composite valuation score derived from multiple key metrics.</li>
+                    <li class="mb-2">Download comprehensive investment reports in Excel format instantly.</li>
+                </ul>
+            </div>
+
+            <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                Whether you are a student, a retail investor, or an aspiring quantitative analyst, <strong>ValueInvest</strong> offers a user-friendly yet powerful approach to discover high-quality stock ideas grounded in solid data.
+            </p>
+
+            <p class="text-center italic text-gray-500 text-sm">
+                Built with passion. Driven by logic. Designed for investors.
+            </p>
+        </section>
+    </div>
+</main>
